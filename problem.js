@@ -39,14 +39,24 @@
 
 // console.log(vowelCount);
 
-const countVowels = (text) => {
-  const vowel = "aeiou";
-  const count = text
-    .toLowerCase()
-    .split("")
-    .filter((singleLetter) => vowel.includes(singleLetter)).length;
+// const countVowels = (text) => {
+//   const vowel = "aeiou";
+//   const count = text
+//     .toLowerCase()
+//     .split("")
+//     .filter((singleLetter) => vowel.includes(singleLetter)).length;
 
-  return count;
+//   return count;
+// };
+
+// console.log(countVowels("aaeennoo"));
+
+const capitalWords = (text) => {
+  const split = text.split(" ");
+  const singleWord = split.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+
+  return singleWord;
 };
-
-console.log(countVowels("aaeennoo"));
+console.log(capitalWords("hello world mama"));
